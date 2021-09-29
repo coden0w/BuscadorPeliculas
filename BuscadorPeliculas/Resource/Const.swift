@@ -6,10 +6,12 @@
 //
 
 import Foundation
+import UIKit
 
 struct Const{
     //key api de omdbapi
     
+    static let sinImagen:UIImage = UIImage(named: "NoImage")!
     
     //enlaces
     struct URL{

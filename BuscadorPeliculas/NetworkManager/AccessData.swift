@@ -34,7 +34,7 @@ class AccessData{
                     }catch{
                         print("->x Error: \(error)")
                     }
-                //NOT OK
+                    //NOT OK
                 }else if response.statusCode == 401{
                     print("->x Error: 401 Acceso denegado!")
                 }

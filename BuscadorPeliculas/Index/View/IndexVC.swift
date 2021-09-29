@@ -83,8 +83,8 @@ extension IndexVC: UITableViewDelegate, UITableViewDataSource{
 
         cell.tituloLabel.text = self.peliculas[indexPath.row].titulo
         cell.fechaEstrenoLabel.text = self.peliculas[indexPath.row].year
-        cell.imgURL.load(url: URL(string: self.peliculas[indexPath.row].imgURL ?? "")!)
-
+        //cell.imgURL.load(url: URL(string: self.peliculas[indexPath.row].imgURL ?? "")!)
+        cell.imgURL.load(imgURL: self.peliculas[indexPath.row].imgURL!)
         
         return cell
     }
