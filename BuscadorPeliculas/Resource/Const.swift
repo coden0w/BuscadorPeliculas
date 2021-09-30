@@ -15,7 +15,9 @@ struct Const{
     
     //enlaces
     struct URL{
+        //enlace para la busqueda multiple de peliculas
         static let omdbapi = "https://www.omdbapi.com/?apikey=a9ef137f&s="
+        //enlace para la busqueda por imdbID para pelicula detallada
         static let selecSP = "https://www.omdbapi.com/?apikey=a9ef137f&i="
     }
     

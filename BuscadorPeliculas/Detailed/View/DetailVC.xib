@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailVC" customModule="BuscadorPeliculas" customModuleProvider="target">
+            <connections>
+                <outlet property="actoresLabel" destination="Zgv-5I-JAJ" id="5FW-16-usq"/>
+                <outlet property="directorLabel" destination="pGh-5p-a9f" id="BLa-ff-Vp5"/>
+                <outlet property="duracionMinsLabel" destination="cqi-v0-9fr" id="0Le-pB-5cZ"/>
+                <outlet property="escritorLabel" destination="3xt-c0-o3x" id="rq3-ic-4gq"/>
+                <outlet property="fechaEstrenoLabel" destination="28P-PU-ru9" id="Sor-yc-cE2"/>
+                <outlet property="generoLabel" destination="S9G-zH-tiM" id="pcK-LL-YRk"/>
+                <outlet property="imagen" destination="whl-5O-YpW" id="PYr-ht-A3o"/>
+                <outlet property="premiosLabel" destination="XFg-10-vQD" id="Ww9-lz-cil"/>
+                <outlet property="sinopsisLabel" destination="29s-Ye-tRZ" id="Gzu-ll-8rf"/>
+                <outlet property="tituloLabel" destination="NRg-du-oPQ" id="Chp-SG-woh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HnO-Bt-qvL">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EMm-bu-XSQ">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="whl-5O-YpW">
+                                    <rect key="frame" x="87" y="0.0" width="240" height="360"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="240" id="tjt-pp-Ulg"/>
+                                        <constraint firstAttribute="height" constant="360" id="wj3-kB-W2A"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NRg-du-oPQ" customClass="PaddingUILabel" customModule="BuscadorPeliculas" customModuleProvider="target">
+                                    <rect key="frame" x="20" y="397" width="374" height="24"/>
+                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sinopsis" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29s-Ye-tRZ" customClass="PaddingUILabel" customModule="BuscadorPeliculas" customModuleProvider="target">
+                                    <rect key="frame" x="20" y="446" width="374" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha Estreno" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28P-PU-ru9" customClass="PaddingUILabel" customModule="BuscadorPeliculas" customModuleProvider="target">
+                                    <rect key="frame" x="20" y="495" width="374" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duracion(Mins)" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cqi-v0-9fr" customClass="PaddingUILabel" customModule="BuscadorPeliculas" customModuleProvider="target">
+                                    <rect key="frame" x="20" y="544" width="374" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genero" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9G-zH-tiM" customClass="PaddingUILabel" customModule="BuscadorPeliculas" customModuleProvider="target">
+                                    <rect key="frame" x="20" y="593" width="374" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Director" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pGh-5p-a9f" customClass="PaddingUILabel" customModule="BuscadorPeliculas" customModuleProvider="target">
+                                    <rect key="frame" x="20" y="642" width="374" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escritor" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xt-c0-o3x" customClass="PaddingUILabel" customModule="BuscadorPeliculas" customModuleProvider="target">
+                                    <rect key="frame" x="20" y="691" width="374" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Actores" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zgv-5I-JAJ" customClass="PaddingUILabel" customModule="BuscadorPeliculas" customModuleProvider="target">
+                                    <rect key="frame" x="20" y="740" width="374" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Premios" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFg-10-vQD" customClass="PaddingUILabel" customModule="BuscadorPeliculas" customModuleProvider="target">
+                                    <rect key="frame" x="20" y="789" width="374" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            <constraints>
+                                <constraint firstItem="29s-Ye-tRZ" firstAttribute="top" secondItem="NRg-du-oPQ" secondAttribute="bottom" constant="25" id="3Fv-yp-0tQ"/>
+                                <constraint firstItem="3xt-c0-o3x" firstAttribute="leading" secondItem="EMm-bu-XSQ" secondAttribute="leading" constant="20" id="3kF-7t-ufj"/>
+                                <constraint firstItem="cqi-v0-9fr" firstAttribute="leading" secondItem="EMm-bu-XSQ" secondAttribute="leading" constant="20" id="7ce-1J-dIv"/>
+                                <constraint firstItem="XFg-10-vQD" firstAttribute="top" secondItem="Zgv-5I-JAJ" secondAttribute="bottom" constant="25" id="7rN-M5-mtQ"/>
+                                <constraint firstAttribute="trailing" secondItem="cqi-v0-9fr" secondAttribute="trailing" constant="20" id="85x-ii-Ycg"/>
+                                <constraint firstAttribute="trailing" secondItem="28P-PU-ru9" secondAttribute="trailing" constant="20" id="9lp-6e-iSh"/>
+                                <constraint firstAttribute="trailing" secondItem="Zgv-5I-JAJ" secondAttribute="trailing" constant="20" id="Dm8-pZ-0FO"/>
+                                <constraint firstAttribute="trailing" secondItem="29s-Ye-tRZ" secondAttribute="trailing" constant="20" id="Exv-oI-c3R"/>
+                                <constraint firstItem="NRg-du-oPQ" firstAttribute="top" secondItem="whl-5O-YpW" secondAttribute="bottom" constant="37" id="FYH-jO-OH6"/>
+                                <constraint firstItem="pGh-5p-a9f" firstAttribute="leading" secondItem="EMm-bu-XSQ" secondAttribute="leading" constant="20" id="JLt-wA-z6H"/>
+                                <constraint firstAttribute="trailing" secondItem="NRg-du-oPQ" secondAttribute="trailing" constant="20" id="NkN-Kn-1oD"/>
+                                <constraint firstItem="28P-PU-ru9" firstAttribute="leading" secondItem="EMm-bu-XSQ" secondAttribute="leading" constant="20" id="Q0o-qh-pTo"/>
+                                <constraint firstItem="Zgv-5I-JAJ" firstAttribute="top" secondItem="3xt-c0-o3x" secondAttribute="bottom" constant="25" id="Qbh-z5-IAa"/>
+                                <constraint firstAttribute="trailing" secondItem="S9G-zH-tiM" secondAttribute="trailing" constant="20" id="TJh-Ae-q7A"/>
+                                <constraint firstItem="whl-5O-YpW" firstAttribute="top" secondItem="EMm-bu-XSQ" secondAttribute="top" id="Wyf-1g-1xY"/>
+                                <constraint firstItem="cqi-v0-9fr" firstAttribute="top" secondItem="28P-PU-ru9" secondAttribute="bottom" constant="25" id="bLD-KE-Xpk"/>
+                                <constraint firstItem="3xt-c0-o3x" firstAttribute="top" secondItem="pGh-5p-a9f" secondAttribute="bottom" constant="25" id="beT-tF-9Po"/>
+                                <constraint firstAttribute="trailing" secondItem="pGh-5p-a9f" secondAttribute="trailing" constant="20" id="c3e-BE-kIH"/>
+                                <constraint firstItem="NRg-du-oPQ" firstAttribute="leading" secondItem="EMm-bu-XSQ" secondAttribute="leading" constant="20" id="gxS-JT-yhz"/>
+                                <constraint firstAttribute="trailing" secondItem="XFg-10-vQD" secondAttribute="trailing" constant="20" id="hnb-Dy-tPM"/>
+                                <constraint firstItem="28P-PU-ru9" firstAttribute="top" secondItem="29s-Ye-tRZ" secondAttribute="bottom" constant="25" id="iRw-yC-CAF"/>
+                                <constraint firstAttribute="trailing" secondItem="whl-5O-YpW" secondAttribute="trailing" constant="87" id="m2J-P5-hIH"/>
+                                <constraint firstItem="S9G-zH-tiM" firstAttribute="leading" secondItem="EMm-bu-XSQ" secondAttribute="leading" constant="20" id="nIO-7f-Io4"/>
+                                <constraint firstItem="29s-Ye-tRZ" firstAttribute="leading" secondItem="EMm-bu-XSQ" secondAttribute="leading" constant="20" id="sy9-FM-4r1"/>
+                                <constraint firstItem="whl-5O-YpW" firstAttribute="leading" secondItem="EMm-bu-XSQ" secondAttribute="leading" constant="87" id="syC-sc-oh6"/>
+                                <constraint firstItem="S9G-zH-tiM" firstAttribute="top" secondItem="cqi-v0-9fr" secondAttribute="bottom" constant="25" id="tet-Us-hqK"/>
+                                <constraint firstItem="XFg-10-vQD" firstAttribute="leading" secondItem="EMm-bu-XSQ" secondAttribute="leading" constant="20" id="yP2-RZ-YZq"/>
+                                <constraint firstAttribute="trailing" secondItem="3xt-c0-o3x" secondAttribute="trailing" constant="20" id="zCH-Vb-ZvW"/>
+                                <constraint firstItem="pGh-5p-a9f" firstAttribute="top" secondItem="S9G-zH-tiM" secondAttribute="bottom" constant="25" id="zPV-VG-bxr"/>
+                                <constraint firstItem="Zgv-5I-JAJ" firstAttribute="leading" secondItem="EMm-bu-XSQ" secondAttribute="leading" constant="20" id="zYp-Jj-L67"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemYellowColor"/>
+                    <constraints>
+                        <constraint firstItem="EMm-bu-XSQ" firstAttribute="leading" secondItem="HnO-Bt-qvL" secondAttribute="leading" id="3bY-Rb-uaI"/>
+                        <constraint firstAttribute="trailing" secondItem="EMm-bu-XSQ" secondAttribute="trailing" id="3q5-fj-c4S"/>
+                        <constraint firstItem="EMm-bu-XSQ" firstAttribute="top" secondItem="HnO-Bt-qvL" secondAttribute="top" id="DYD-HM-nSj"/>
+                        <constraint firstAttribute="bottom" secondItem="EMm-bu-XSQ" secondAttribute="bottom" id="JZi-Tm-QJC"/>
+                        <constraint firstItem="EMm-bu-XSQ" firstAttribute="width" secondItem="HnO-Bt-qvL" secondAttribute="width" id="aOI-pQ-vBd"/>
+                        <constraint firstAttribute="bottom" secondItem="XFg-10-vQD" secondAttribute="bottom" constant="25" id="jZz-gy-oMZ"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="jqF-qV-mbA"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="JG0-hi-Gs8"/>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemYellowColor"/>
+            <constraints>
+                <constraint firstItem="HnO-Bt-qvL" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="8yH-eX-vFq"/>
+                <constraint firstItem="HnO-Bt-qvL" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Cpa-PA-cFE"/>
+                <constraint firstItem="HnO-Bt-qvL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="nEH-B2-Fp7"/>
+                <constraint firstItem="HnO-Bt-qvL" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="uHl-5N-Yp5"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="81.696428571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

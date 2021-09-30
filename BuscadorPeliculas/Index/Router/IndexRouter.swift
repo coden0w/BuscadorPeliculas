@@ -29,5 +29,11 @@ class IndexRouter{
         guard let view = sourceView else {fatalError("->x Error desconocido!")}
         self.sourceView = view
     }
+    
+    //mostrar vista detailView
+    func navegarDetailVC(imdbID:String){
+        let detailR = DetailRouter(imdbID: imdbID).viewController
+        sourceView?.navigationController?.pushViewController(detailR, animated: true)
+    }
 }
 

@@ -25,7 +25,12 @@ class IndexViewModel{
         self.router?.setSourceView(sourceView: view)
     }
     
-    func solicitarListaPeliculas() -> Observable<[Pelicula]>{
-        return accessData.solicitarPeliculas()
+    func solicitarListaPeliculas(busqueda:String) -> Observable<[Pelicula]>{
+        return accessData.solicitarPeliculas(busqueda: busqueda)
+    }
+    
+    //cambiar de vista
+    func cambiarDetailView(imdbID: String){
+        router?.navegarDetailVC(imdbID: imdbID)
     }
 }

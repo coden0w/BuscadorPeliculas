@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InicioVC" customModule="BuscadorPeliculas" customModuleProvider="target">
             <connections>
+                <outlet property="mySearchBar" destination="uwB-TF-Uyb" id="TAJ-Uz-SdV"/>
                 <outlet property="myTableView" destination="4Kx-5G-LWV" id="6ti-Li-8SS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -19,9 +20,18 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="uwB-TF-Uyb">
+                    <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                    <color key="barTintColor" systemColor="systemYellowColor"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4Kx-5G-LWV">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <rect key="frame" x="0.0" y="105" width="414" height="757"/>
+                    <color key="backgroundColor" systemColor="systemYellowColor"/>
+                    <color key="separatorColor" systemColor="labelColor"/>
+                    <color key="sectionIndexColor" systemColor="labelColor"/>
+                    <color key="sectionIndexBackgroundColor" systemColor="systemYellowColor"/>
+                    <color key="sectionIndexTrackingBackgroundColor" systemColor="systemYellowColor"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="XJd-OK-pj4"/>
                         <outlet property="delegate" destination="-1" id="sFI-FF-Wi4"/>
@@ -29,19 +39,25 @@
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" systemColor="systemYellowColor"/>
             <constraints>
                 <constraint firstItem="4Kx-5G-LWV" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="Jik-fX-6jR"/>
-                <constraint firstAttribute="trailing" secondItem="4Kx-5G-LWV" secondAttribute="trailing" id="U22-tD-Aeq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4Kx-5G-LWV" secondAttribute="trailing" id="U22-tD-Aeq"/>
+                <constraint firstItem="uwB-TF-Uyb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="cVe-I9-yvT"/>
+                <constraint firstItem="uwB-TF-Uyb" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="mUx-cI-oqN"/>
                 <constraint firstItem="4Kx-5G-LWV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="rYN-Yp-szz"/>
-                <constraint firstItem="4Kx-5G-LWV" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="zwI-Oa-muW"/>
+                <constraint firstItem="4Kx-5G-LWV" firstAttribute="top" secondItem="uwB-TF-Uyb" secondAttribute="bottom" constant="10" id="tym-9e-1S0"/>
+                <constraint firstItem="uwB-TF-Uyb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="zWx-UN-uue"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="114.50892857142857"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

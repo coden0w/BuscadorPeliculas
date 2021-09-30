@@ -22,7 +22,11 @@ class CustomMovieCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
-        // Configure the view for the selected state
+//        if selected {
+//            contentView.backgroundColor = .yellow
+//        } else {
+//            contentView.backgroundColor = UIColor.systemYellow
+//        }
     }
     
 }
@@ -44,7 +48,6 @@ extension UIImageView{
                 }
             }.resume()
         }
-        
     }
     
     //usada inicialmente pero me salia muchos logs con error 1002 (conexion no segura a pesar de acceder a enlaces https)
